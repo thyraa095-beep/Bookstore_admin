@@ -1,0 +1,17 @@
+server {
+    listen ${PORT};
+    server_name _;
+    root /usr/share/nginx/html;
+    index index.html;
+
+    # SPA fallback: let React Router handle all routes
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Cache built assets
+    location /assets/ {
+        try_files $uri =404;
+        expires 7d;
+    }
+}
