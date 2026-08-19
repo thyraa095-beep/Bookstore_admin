@@ -7,7 +7,7 @@ ARG REACT_APP_API_URL=https://bookstore-backend-wtpr.onrender.com/api/v1
 ENV REACT_APP_API_URL=$REACT_APP_API_URL
 
 COPY package*.json ./
-RUN npm ci
+RUN npm ci --legacy-peer-deps
 COPY . .
 RUN npm run build
 
