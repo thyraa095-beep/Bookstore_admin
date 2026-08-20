@@ -109,7 +109,7 @@ export default function AdminLayout({ children, title }: { children: ReactNode; 
           <header className="mb-8 flex items-center justify-between">
             <h1 className="text-2xl font-bold text-slate-900">{title}</h1>
             <Link
-              to="http://localhost:3000"
+              to="https://thyraa095-beep.github.io/Bookstore_user/"
               target="_blank"
               className="hidden sm:inline-flex text-sm text-slate-600 hover:text-indigo-600 font-medium transition"
             >
